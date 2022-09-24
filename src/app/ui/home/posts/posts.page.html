@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <span *ngIf="user">{{user.username}}</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button style="font-size: large;">
+        <ion-icon name="compass-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <story-card></story-card>
+  </div>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <post-card *ngFor="let post of posts" [post]="post"></post-card>
+</ion-content>
+<div id="postSettingsDiv">
+  <!-- Arrows -->
+  <div>
+    <div id="slideBtn" style="display: flex;flex-direction: column;">
+      <ion-icon id="downArrow1" name="chevron-down-outline"></ion-icon>
+      <ion-icon id="downArrow2" name="chevron-down-outline"></ion-icon>
+    </div>
+  </div>
+  <!-- Arrows End -->
+  <!-- Round Buttons -->
+  <div>
+    <div id="shareButton" class="roundButton" (click)="share()">
+      <span id="shareIcon">
+        <ion-icon name="share-social-outline"></ion-icon>
+      </span>
+      <span>Paylaş</span>
+    </div>
+    <div id="linkButton" class="roundButton" (click)="link()">
+      <span id="linkIcon">
+        <ion-icon name="link-outline"></ion-icon>
+      </span>
+      <span>Bağlantı</span>
+    </div>
+    <div id="complaintButton" class="roundButton" (click)="complaint()">
+      <span id="complaintIcon">
+        <ion-icon name="warning-outline"></ion-icon>
+      </span>
+      <span>Şikayet Et</span>
+    </div>
+  </div>
+  <!-- Round Buttons End -->
+  <!-- Other Buttons -->
+  <div>
+    <div>Bu gönderiyi neden görüyorsun?</div>
+    <div>Favorilere Ekle</div>
+    <div>Gizle</div>
+    <div>Takibi Bırak</div>
+  </div>
+  <!-- Other Buttons End -->
+</div>
+<div id="postSettingsDivBackground">
+
+</div>

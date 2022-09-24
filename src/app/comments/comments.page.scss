@@ -1,0 +1,148 @@
+.post_kullanici_photo {
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.comment-card {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  height: auto;
+  transition: background .5s, color .7s;
+}
+
+.comment-card>div:first-child {
+  display: flex;
+  justify-content: start;
+}
+
+.comment-card>div:first-child>div:first-child {
+  height: 100%;
+  width: 15%;
+}
+
+.comment-card>div:first-child>div:nth-child(2) {
+  height: 100%;
+  width: 75%;
+}
+
+//Comment bottom bar start -> date like count and answer
+.comment-card>div:first-child>div:nth-child(2)>div:nth-child(2) {
+  display: flex;
+  justify-content: start;
+}
+
+.comment-card>div:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
+  opacity: .6;
+  padding: 0 7px 0 7px;
+  font-size: 13px;
+}
+
+.comment-card>div:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(3) {
+  padding: 0 7px 0 7px;
+  font-size: 13px;
+}
+
+.comment-card>div:first-child>div:nth-child(2)>div:nth-child(2)>div:nth-child(4) {
+  opacity: .8;
+  padding: 0 7px 0 7px;
+  font-size: 13px;
+}
+
+//Comment bottom bar end
+
+//Comment like
+.comment-card>div:first-child>div:nth-child(3) {
+  height: 100%;
+  width: 10%;
+}
+
+.comment-card>div:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.comment-card>div:nth-child(2)>div:first-child {
+  margin-left: 15%;
+  width: 10%;
+  height: 1px;
+  background: #CACFD2;
+}
+
+.comment-card>div:nth-child(2)>div:nth-child(2) {
+  margin-left: 4%;
+  color: #A6ACAF;
+}
+
+.comment-card>div:nth-child(2)>div:nth-child(2)>span {
+  display: flex;
+  align-items: center;
+}
+
+.comment-card>div:nth-child(3) {
+  margin-left: 15%;
+}
+
+.comment-card-username {
+  font-weight: 700;
+}
+
+//Bottom Bar
+
+#bottom-bar {
+  height: 6.8%;
+  width: 100%;
+  border-top: 1px solid #D7DBDD;
+  display: flex;
+  align-items: center;
+}
+
+#bottom-bar>div:last-child {
+  height: 6.8%;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 9px;
+}
+
+#bottom-bar>div:last-child>div {
+  display: inline-block;
+  margin: 6px;
+}
+
+#bottom-bar>div:last-child>div:nth-child(1) {
+  width: 10%;
+}
+
+#bottom-bar>div:last-child>div:nth-child(2) {
+  width: 70%;
+}
+
+#bottom-bar>div:last-child>div:nth-child(3) {
+  width: 20%;
+}
+
+#bottom-bar>#comment-answer-bar {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: #A6ACAF;
+  color: #fff;
+  bottom: 7%;
+  padding: 8px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#bottom-bar>#comment-answer-bar>span:last-child {
+  padding: 0;
+  margin-left: auto;
+  font-size: 25px;
+  margin-right: 3%;
+}

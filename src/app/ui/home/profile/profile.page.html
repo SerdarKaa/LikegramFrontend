@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <span *ngIf="user" id="likegram">
+        {{user.username}}
+      </span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openMenu()">
+        <ion-icon style="font-size: 35px;" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="profile" *ngIf="user">
+    <div id="top-navigation">
+      <span>
+        <img [src]="baseUrl+user.profilePhoto" alt="">
+      </span>
+      <span>
+        <div align="center" class="mb-0 mt-2" style="font-size: large;">
+          <span>
+            <b>
+              {{user.username}}
+            </b>
+          </span>
+        </div>
+        <hr class="mt-2 mb-2">
+        <div id="bottom-navigation" class="mt-0">
+          <div>
+            <span align="center">{{postCount}}</span>
+            <span>Gönderi</span>
+          </div>
+          <div>
+            <span align="center">{{followingUserCount}}</span>
+            <span>Takipçi</span>
+          </div>
+          <div>
+            <span align="center">{{followedUserCount}}</span>
+            <span>Takip</span>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div id="description">{{user.description}}</div>
+    <hr>
+  </div>
+</ion-content>
